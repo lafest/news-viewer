@@ -6,10 +6,11 @@ const NewsItemBlock = styled.div`
   .thumbnail {
     margin-right: 1rem;
     img {
-      display: block;
+      display: block; // 이 요소를 block으로(자동줄바꿈되도록, inline의 반대) 취급.
+      // inline: 너비/높이 설정불가. inline-block: 너비/높이 설정 가능한 inline요소
       width: 160px;
       height: 160px;
-      object-fit: cover;
+      object-fit: cover; // 가로세로 비율 유지하면서 채우기. 채웠는데 안맞는 부분 있으면 잘려나감
     }
   }
   .contents {
@@ -21,9 +22,9 @@ const NewsItemBlock = styled.div`
     }
     p {
       margin: 0;
-      line-height: 1.5;
+      line-height: 1.5; // 줄간격 px
       margin-top: 0.5rem;
-      white-space: normal;
+      white-space: normal; // 기본값이 normal
     }
   }
   & + & {
